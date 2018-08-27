@@ -24,8 +24,8 @@ class Heatmap
     background.src = screenshotUrl
 
     background.onload = () =>
-      @width = background.width
-      @height = background.height
+      @width = Math.max(background.width, opts.width)
+      @height = Math.max(background.height, opts.height)
       @target.width = @width
       @target.height = @height
       @target.style.width = @width + 'px'
