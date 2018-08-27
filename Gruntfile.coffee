@@ -7,7 +7,7 @@ module.exports = (grunt) ->
           "build/heatmap.js": ["src/*.coffee"]
           
     uglify:
-      my_target:
+      compress:
         files:
           "build/heatmap.min.js": ["build/heatmap.js"]
 
@@ -18,4 +18,5 @@ module.exports = (grunt) ->
 
   grunt.loadNpmTasks "grunt-contrib-coffee"
   grunt.loadNpmTasks "grunt-contrib-watch"
+  grunt.loadNpmTasks "grunt-contrib-uglify"
   grunt.registerTask "default", ["coffee", "uglify"]
